@@ -1,6 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
-const UserSchema = new Schema({
+const DataSchema = new Schema({
   clerkId: {
     type: String,
     required: true,
@@ -27,6 +27,6 @@ const UserSchema = new Schema({
   },
 });
 
-const User = models?.User || model("User", UserSchema);
+const Data = models?.Data || model("Data", DataSchema);
 
-export default User;
+export default Data;
