@@ -15,7 +15,7 @@ const DataSchema = new Schema({
     type: String,
     unique: true,
   },
-  photo: {
+  ProfileImage: {
     type: String,
     required: true,
   },
@@ -25,6 +25,10 @@ const DataSchema = new Schema({
   lastName: {
     type: String,
   },
+  chats:{
+    type:[{type:Schema.Types.ObjectId,ref:"chat"}],
+    default:[]
+},
 });
 
 const Data = models?.Data || model("Data", DataSchema);
